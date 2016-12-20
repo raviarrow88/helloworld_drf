@@ -20,7 +20,9 @@ from helloapi import views
 from helloapi.views import EmployeeViewList
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^disp/', views.EmployeeViewList.as_view()),
+    url(r'^disp/$', views.EmployeeViewList.as_view()),
+    url(r'^disp/(?P<id>\d+)/$', views.EmployeeGetView.as_view()),
+
 
 ]
 
